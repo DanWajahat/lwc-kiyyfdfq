@@ -1,12 +1,11 @@
 <template>
-	<template for:each={contact} for:item="item">
+	<article class="slds-card">
 
-		<li key={item.id}>
-			{item.name}</li>
-	</template>
+		<lightning-input label="Type here" data-id="input"></lightning-input>
 
+		<lightning-button label="destroy" onclick={handleDestroy} variant="brand"> </lightning-button>
 
-
-
-
+		<br></br>
+		<c-footer></c-footer>
+	</article>
 </template>

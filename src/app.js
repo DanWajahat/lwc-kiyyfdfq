@@ -1,7 +1,12 @@
 import { LightningElement } from "lwc";
 
 export default class App extends LightningElement {
- 
-contacts = ["John", "Kate", "Henry"];
+
   
+
+  handleDestroy = event => {
+    
+   let field = this.template.querySelector(`[data-id="input"]`).value = '';
+  }
+ 
 }
