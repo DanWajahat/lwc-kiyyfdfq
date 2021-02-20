@@ -1,12 +1,30 @@
-import { LightningElement } from "lwc";
+import { LightningElement, track } from "lwc";
 
 export default class App extends LightningElement {
 
-  
+ 
+ @track state = {
+   page: { 
+     number: 0
+   },
 
-  handleDestroy = event => {
+  character: {
     
-   let field = this.template.querySelector(`[data-id="input"]`).value = '';
+  }
+
+ }
+
+  handleNavigation = event => {
+    this.changePageNumber(event.target.dataset.id)
+    
+  }
+
+  changePageNumber = action => {
+    switch(action) {
+      case "previous":
+      this.state.page.numer++;
+
+    }
   }
  
 }
